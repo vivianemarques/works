@@ -49,7 +49,7 @@
 <default>NULL</default></row>
 <row name="id_Moradia" null="0" autoincrement="0">
 <datatype>CHAR(1)</datatype>
-<default>'NULL'</default><relation table="Moradia" row="id" />
+<relation table="Moradia" row="id" />
 </row>
 <row name="id_Turno_Estudo" null="0" autoincrement="0">
 <datatype>CHAR</datatype>
@@ -57,7 +57,7 @@
 </row>
 <row name="id_Etinia" null="1" autoincrement="0">
 <datatype>CHAR</datatype>
-<relation table="Etinia" row="id" />
+<default>NULL</default><relation table="Etinia" row="id" />
 </row>
 <row name="id_Classe_Renda" null="0" autoincrement="0">
 <datatype>CHAR</datatype>
@@ -65,7 +65,7 @@
 </row>
 <row name="id_Trabalho" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<relation table="Trabalho" row="id" />
+<default>NULL</default><relation table="Trabalho" row="id" />
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -74,7 +74,7 @@
 <table x="715" y="99" name="Moradia">
 <row name="id" null="0" autoincrement="0">
 <datatype>CHAR(1)</datatype>
-<default>'NULL'</default></row>
+</row>
 <row name="Descricao" null="0" autoincrement="0">
 <datatype>VARCHAR(20)</datatype>
 </row>
@@ -83,7 +83,7 @@
 </key>
 </table>
 <table x="721" y="190" name="Turno_Estudo">
-<row name="id" null="0" autoincrement="1">
+<row name="id" null="0" autoincrement="0">
 <datatype>CHAR</datatype>
 </row>
 <row name="Descricao" null="1" autoincrement="0">
@@ -94,11 +94,11 @@
 </key>
 </table>
 <table x="738" y="275" name="Etinia">
-<row name="id" null="1" autoincrement="1">
+<row name="id" null="0" autoincrement="0">
 <datatype>CHAR</datatype>
 </row>
-<row name="Descricao" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
+<row name="Descricao" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -109,14 +109,14 @@
 <datatype>CHAR</datatype>
 </row>
 <row name="Descricao" null="0" autoincrement="0">
-<datatype>VARCHAR(40)</datatype>
+<datatype>VARCHAR(100)</datatype>
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
 <table x="330" y="510" name="Profissao">
-<row name="id" null="1" autoincrement="1">
+<row name="id" null="0" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="Descricao" null="0" autoincrement="0">
@@ -127,12 +127,12 @@
 </key>
 </table>
 <table x="550" y="418" name="Trabalho">
-<row name="id" null="1" autoincrement="1">
+<row name="id" null="0" autoincrement="1">
 <datatype>INTEGER</datatype>
 </row>
 <row name="Carteira_Assinada" null="0" autoincrement="0">
 <datatype>CHAR</datatype>
-<default>'NULL'</default></row>
+</row>
 <row name="id_Profissao" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="Profissao" row="id" />
@@ -204,7 +204,7 @@
 </row>
 <row name="Comentario" null="1" autoincrement="0">
 <datatype>VARCHAR(500)</datatype>
-</row>
+<default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
